@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/js/index.js"></script>
+
+
+    <style>
+        table {
+            text-align: center;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        td {
+            width: 50%;
+        }
+
+        .labelID {
+            float: left;
+            width: 17.5em;
+            margin-right: 30px;
+            text-align: right;
+        }
+
+
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            table-layout: fixed;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .h3Title {
+            padding-top: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn {
+            margin-left: 320px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 class="h3Title" onclick="myFunction()">Adauga</h3>
+    <div id="myDIV" style="display:none;" ;>
+        <br>
+        <label class="labelID"> Nume:</label>
+        <input class="input" type="text" name="FirstName" value="" id="first" placeholder="Nume">
+        <br>
+
+        <div id="content">
+
+        </div>
+
+        <br>
+
+        <label class="labelID"> Prenume:</label>
+        <input class="input" type="text" name="LastName" value="" id="last" placeholder="Prenume">
+        <br>
+        <div id="content1">
+        </div>
+        <br>
+        <label class="labelID"> Data inscrierii:</label>
+        <input class="input" type="date" name="bday" id="date">
+
+        <br>
+        <div id="content2">
+
+        </div>
+        <br>
+        <button class="btn" name="submit" onclick="save()">Save</button>
+    </div>
+
+    <hr>
+    <h3 class="h3Title" onclick="showHide()">Filtre</h3>
+    <div id="otherDiv" style="display:none">
+        <br>
+        <label class="labelID"> Filtru nume:</label>
+        <input type="text" name="Filtru" value="" id="IDfiltru" placeholder="Filtru nume">
+
+
+        <br>
+        <br>
+        <label class="labelID"> Filtru prenume:</label>
+        <input class="input" type="text" name="Filtru" value="" id="idFiltru" placeholder="Filtru prenume">
+
+        <br>
+        <br>
+        <label class="labelID"> Filtru data:</label>
+        <input class="input" type="date" name="Filtru" value="" id="idFiltru" <br>
+        <br>
+        <br>
+
+        <button class="btn" name="submit" onclick="filter()">Filtreaza</button>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <table style="text-align:center">
+        <thead class="thead">
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th>Data inscrierii</th>
+            <th>Actiuni</th>
+        </thead>
+
+
+        <tbody id="parinte">
+
+        </tbody>
+
+
+    </table>
+
+
+</body>
+
+</html>
